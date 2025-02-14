@@ -1,0 +1,33 @@
+body{
+    background-color: #BCCCDC;
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+}
+.container2>input{
+    height:40px;
+    width:300px;
+    
+}
+.container2>button{
+    height:30px;
+    width:100px;
+    text-align: center;
+    padding-top:2px;
+}
+input{
+    margin-bottom: 10px;
+}
+.added-item{
+    display: flex;
+    background-color: white;
+    width:50%;
+    margin-bottom: 5px;
+
+}
+.close{
+    background-color: white;
+    border:none;
+    height: 10px;
+}
