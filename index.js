@@ -5,6 +5,10 @@ bouton.addEventListener("click",function(){
     c = document.querySelector("#content");
     nom =n.value;
     contenu = c.value;
+    if(nom == ""||contenu == ""){
+        alert("Entrée non valide!");
+    }
+    else{
     const cont = document.querySelector(".container1")
     const newDiv = document.createElement("div");
     newDiv.classList.add("added-item")
@@ -26,6 +30,7 @@ bouton.addEventListener("click",function(){
     newDiv.appendChild(textNode);
     newDiv.appendChild(closeButton);
     cont.appendChild(newDiv);
+    }
 
     
 });
