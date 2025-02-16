@@ -1,5 +1,5 @@
 body{
-    background-color: #BCCCDC;
+    background-color: #9aaab9;
 }
 .container2{
     display: flex;
@@ -14,6 +14,7 @@ body{
     height:30px;
     width:100px;
     text-align: center;
+    margin-top:20px;
     padding-top:2px;
 }
 input{
@@ -27,7 +28,7 @@ input{
 
 }
 .close{
-    background-color: white;
     border:none;
     height: 10px;
+    padding:2px;
 }
