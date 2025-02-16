@@ -1,6 +1,11 @@
 
 bouton = document.querySelector(".btn");
-bouton.addEventListener("click",function(){
+function removeTask(b){
+    const selectedItem = b.parentNode;
+    selectedItem.remove();
+}
+
+function addTask(){
     n = document.querySelector("#name");
     c = document.querySelector("#content");
     nom =n.value;
@@ -19,21 +24,17 @@ bouton.addEventListener("click",function(){
     icon.height="15";
     icon.style.marginTop="1px";
     icon.style.marginLeft="10px";
+    textNode.textContent = nom+' : '+contenu;
     const closeButton = document.createElement("button");
     closeButton.classList.add("close");
-    
     closeButton.appendChild(icon);
-    closeButton.addEventListener("click",function(){
-        const selectedItem = closeButton.parentNode;
-        selectedItem.remove();});
-    textNode.textContent = nom+' : '+contenu;
+    closeButton.addEventListener("click",()=>removeTask(closeButton));
     newDiv.appendChild(textNode);
-    newDiv.appendChild(closeButton);
+    newDiv.appendChild(closeButton);    
     cont.appendChild(newDiv);
-    }
-
-    
-});
+}
+}
+bouton.addEventListener("click",()=>addTask());
 
 
 
